@@ -9,6 +9,7 @@ import Kampf from './frontend/Kampf';
 import Gaestebuch from './frontend/Gaestebuch';
 import Bored from './frontend/Bored';
 import { Shop } from './frontend/shop/Shop.jsx';
+import { ShopStats } from './frontend/shop/ShopStats.jsx';
 
 export default function App() {
     return (
@@ -56,6 +57,16 @@ export default function App() {
                         >
                             Shop
                         </NavLink>
+                        <NavLink
+                            to="/shopstats"
+                            style={({ isActive }) => ({
+                                textDecoration: 'none',
+                                color: isActive ? '#1c7ed6' : '#495057',
+                                fontWeight: isActive ? 'bold' : 'normal',
+                            })}
+                        >
+                            Shop Stats
+                        </NavLink>
                         <NavLink to="/funfacts">FunFacts</NavLink>
                         <NavLink to="/kampf">Kampf</NavLink>
                         <NavLink to="/gaestebuch">Gästebuch</NavLink>
@@ -77,6 +88,7 @@ export default function App() {
                         <Route path="/kampf" element={<Kampf />} />
                         <Route path="/gaestebuch" element={<Gaestebuch />} />
                         <Route path="/ideen" element={<Bored />} />
+                        <Route path="/shopstats" element={<ShopStats />} />
                     </Routes>
                 </Container>
             </main>

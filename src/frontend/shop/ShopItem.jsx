@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Image, Text, Badge, Button, Group, Grid } from '@mantine/core';
+import { Card, Image, Text, Badge, Button, Group, Grid, Rating } from '@mantine/core';
 
 export const ShopItem = () => {
   return (
@@ -22,6 +22,8 @@ export const ShopItem = () => {
         activities on and around the fjords of Norway
       </Text>
 
+      <Rating defaultValue={0} />
+
       <Grid>
         <Grid.Col span={6}>
             <Button color="blue" fullWidth mt="md" radius="md">
@@ -29,7 +31,7 @@ export const ShopItem = () => {
             </Button>
         </Grid.Col>
         <Grid.Col span={6}>
-            <Button color="gray" fullWidth mt="md" radius="md">
+            <Button color="gray" fullWidth mt="md" radius="md" >
                 View details
             </Button>
         </Grid.Col>
