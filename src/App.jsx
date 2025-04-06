@@ -4,6 +4,7 @@ import { Container, Group, MantineProvider } from '@mantine/core';
 import Home from './frontend/Home.jsx';
 import About from './frontend/About.jsx';
 import Contact from './frontend/Contact.jsx';
+import { Shop } from './frontend/shop/Shop.jsx';
 
 export default function App() {
     return (
@@ -41,6 +42,16 @@ export default function App() {
                         >
                             Kontakt
                         </NavLink>
+                        <NavLink
+                            to="/shop"
+                            style={({ isActive }) => ({
+                                textDecoration: 'none',
+                                color: isActive ? '#1c7ed6' : '#495057',
+                                fontWeight: isActive ? 'bold' : 'normal',
+                            })}
+                        >
+                            Shop
+                        </NavLink>
                     </Group>
                 </Container>
             </header>
@@ -51,6 +62,7 @@ export default function App() {
                         <Route path="/" element={<Home />} />
                         <Route path="/about" element={<About />} />
                         <Route path="/contact" element={<Contact />} />
+                        <Route path="/shop" element={<Shop />} />
                     </Routes>
                 </Container>
             </main>
