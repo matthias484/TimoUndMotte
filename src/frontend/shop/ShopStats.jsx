@@ -15,17 +15,17 @@ export const ShopStats = () => {
   return (
     <Grid>
         <Grid.Col span={{ base: 12, md: 12, lg: 12 }}>
-        <BarChart
-            h={300}
-            data={data}
-            dataKey="month"
-            series={[
-                { name: 'Smartphones', color: 'violet.6' },
-                { name: 'Laptops', color: 'blue.6' },
-                { name: 'Tablets', color: 'teal.6' },
-            ]}
-            tickLine="y"
-            />
+            <BarChart
+                h={300}
+                data={data}
+                dataKey="month"
+                series={[
+                    { name: 'Smartphones', color: 'violet.6' },
+                    { name: 'Laptops', color: 'blue.6' },
+                    { name: 'Tablets', color: 'teal.6' },
+                ]}
+                tickLine="y"
+                />
         </Grid.Col>
     </Grid>
     
