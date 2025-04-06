@@ -4,6 +4,10 @@ import { Container, Group, MantineProvider } from '@mantine/core';
 import Home from './frontend/Home.jsx';
 import About from './frontend/About.jsx';
 import Contact from './frontend/Contact.jsx';
+import FunFacts from './frontend/FunFacts';
+import Kampf from './frontend/Kampf';
+import Gaestebuch from './frontend/Gaestebuch';
+import Bored from './frontend/Bored';
 import { Shop } from './frontend/shop/Shop.jsx';
 
 export default function App() {
@@ -52,6 +56,11 @@ export default function App() {
                         >
                             Shop
                         </NavLink>
+                        <NavLink to="/funfacts">FunFacts</NavLink>
+                        <NavLink to="/kampf">Kampf</NavLink>
+                        <NavLink to="/gaestebuch">Gästebuch</NavLink>
+                        <NavLink to="/ideen">💡 Ideen</NavLink>
+
                     </Group>
                 </Container>
             </header>
@@ -63,6 +72,11 @@ export default function App() {
                         <Route path="/about" element={<About />} />
                         <Route path="/contact" element={<Contact />} />
                         <Route path="/shop" element={<Shop />} />
+
+                        <Route path="/funfacts" element={<FunFacts />} />
+                        <Route path="/kampf" element={<Kampf />} />
+                        <Route path="/gaestebuch" element={<Gaestebuch />} />
+                        <Route path="/ideen" element={<Bored />} />
                     </Routes>
                 </Container>
             </main>
