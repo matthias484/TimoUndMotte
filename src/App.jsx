@@ -5,6 +5,7 @@ import Home from './frontend/Home.jsx';
 import About from './frontend/About.jsx';
 import Contact from './frontend/Contact.jsx';
 import { Shop } from './frontend/shop/Shop.jsx';
+import { ShopStats } from './frontend/shop/ShopStats.jsx';
 
 export default function App() {
     return (
@@ -52,6 +53,16 @@ export default function App() {
                         >
                             Shop
                         </NavLink>
+                        <NavLink
+                            to="/shopstats"
+                            style={({ isActive }) => ({
+                                textDecoration: 'none',
+                                color: isActive ? '#1c7ed6' : '#495057',
+                                fontWeight: isActive ? 'bold' : 'normal',
+                            })}
+                        >
+                            Shop Stats
+                        </NavLink>
                     </Group>
                 </Container>
             </header>
@@ -63,6 +74,7 @@ export default function App() {
                         <Route path="/about" element={<About />} />
                         <Route path="/contact" element={<Contact />} />
                         <Route path="/shop" element={<Shop />} />
+                        <Route path="/shopstats" element={<ShopStats />} />
                     </Routes>
                 </Container>
             </main>
