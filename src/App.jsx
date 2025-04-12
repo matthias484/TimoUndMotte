@@ -7,6 +7,7 @@ import Contact from './frontend/Contact.jsx';
 import { Shop } from './frontend/shop/Shop.jsx';
 import { ShopStats } from './frontend/shop/ShopStats.jsx';
 import { ShopCheckout } from './frontend/shop/ShopCheckout.jsx';
+import { CryptoInfo } from './frontend/crypto/CryptoInfo.jsx';
 
 export default function App() {
     return (
@@ -74,6 +75,16 @@ export default function App() {
                         >
                             Shop Checkout
                         </NavLink>
+                        <NavLink
+                            to="/cryptoinfo"
+                            style={({ isActive }) => ({
+                                textDecoration: 'none',
+                                color: isActive ? '#1c7ed6' : '#495057',
+                                fontWeight: isActive ? 'bold' : 'normal',
+                            })}
+                        >
+                            Crypto Info
+                        </NavLink>
                     </Group>
                 </Container>
             </header>
@@ -87,6 +98,7 @@ export default function App() {
                         <Route path="/shop" element={<Shop />} />
                         <Route path="/shopstats" element={<ShopStats />} />
                         <Route path="/shopcheckout" element={<ShopCheckout />} />
+                        <Route path="/cryptoinfo" element={<CryptoInfo />} />
                     </Routes>
                 </Container>
             </main>
