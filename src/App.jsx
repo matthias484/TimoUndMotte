@@ -4,6 +4,10 @@ import { Container, Group, MantineProvider } from '@mantine/core';
 import Home from './frontend/Home.jsx';
 import About from './frontend/About.jsx';
 import Contact from './frontend/Contact.jsx';
+import FunFacts from './frontend/FunFacts';
+import Kampf from './frontend/Kampf';
+import Gaestebuch from './frontend/Gaestebuch';
+import Bored from './frontend/Bored';
 import { Shop } from './frontend/shop/Shop.jsx';
 import { ShopStats } from './frontend/shop/ShopStats.jsx';
 import { ShopCheckout } from './frontend/shop/ShopCheckout.jsx';
@@ -65,26 +69,6 @@ export default function App() {
                         >
                             Shop Stats
                         </NavLink>
-                        <NavLink
-                            to="/shopcheckout"
-                            style={({ isActive }) => ({
-                                textDecoration: 'none',
-                                color: isActive ? '#1c7ed6' : '#495057',
-                                fontWeight: isActive ? 'bold' : 'normal',
-                            })}
-                        >
-                            Shop Checkout
-                        </NavLink>
-                        <NavLink
-                            to="/cryptoinfo"
-                            style={({ isActive }) => ({
-                                textDecoration: 'none',
-                                color: isActive ? '#1c7ed6' : '#495057',
-                                fontWeight: isActive ? 'bold' : 'normal',
-                            })}
-                        >
-                            Crypto Info
-                        </NavLink>
                     </Group>
                 </Container>
             </header>
@@ -96,6 +80,11 @@ export default function App() {
                         <Route path="/about" element={<About />} />
                         <Route path="/contact" element={<Contact />} />
                         <Route path="/shop" element={<Shop />} />
+
+                        <Route path="/funfacts" element={<FunFacts />} />
+                        <Route path="/kampf" element={<Kampf />} />
+                        <Route path="/gaestebuch" element={<Gaestebuch />} />
+                        <Route path="/ideen" element={<Bored />} />
                         <Route path="/shopstats" element={<ShopStats />} />
                         <Route path="/shopcheckout" element={<ShopCheckout />} />
                         <Route path="/cryptoinfo" element={<CryptoInfo />} />
